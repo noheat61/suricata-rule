@@ -1,11 +1,7 @@
 # 수업시간
 alert tcp any any -> any 80 (msg:"gilgil.net access"; content:"GET /"; content:"Host: "; content:"gilgil.net"; fast_pattern; sid:10001; rev:1;)
-
 alert tcp any any -> any 80 (msg:"netflix.com access"; content:"GET /"; content:"Host: "; content:"netflix.com"; fast_pattern; sid:10002; rev:1;)
-alert tcp any any -> any 443 (msg:"netfilx.com access"; tls_sni; content:"netfilx.com"; fast_pattern; sid:10003; rev:1;)
-
-alert tcp any any -> any 80 (msg:"qt.io access"; content:"GET /"; content:"Host: "; content:"qt.io"; fast_pattern; sid:10004; rev:1;)
-alert tcp any any -> any 443 (msg:"qt.io access"; tls_sni; content:"qt.io"; fast_pattern; sid:10005; rev:1;)
+alert tcp any any -> any 80 (msg:"qt.io access"; content:"GET /"; content:"Host: "; content:"qt.io"; fast_pattern; sid:10003; rev:1;)
 
 # 북마크
 alert tcp any any -> any 443 (msg:"naver.com access"; tls_sni; content:"naver.com"; fast_pattern; sid:10006; rev:1;)
