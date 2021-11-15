@@ -1,0 +1,29 @@
+# 수업시간
+alert tcp any any -> any 80 (msg:"gilgil.net access"; content:"GET /"; content:"Host: "; content:"gilgil.net"; fast_pattern; sid:10001; rev:1;)
+
+alert tcp any any -> any 80 (msg:"netflix.com access"; content:"GET /"; content:"Host: "; content:"netflix.com"; fast_pattern; sid:10002; rev:1;)
+alert tcp any any -> any 443 (msg:"netfilx.com access"; tls_sni; content:"netfilx.com"; fast_pattern; sid:10003; rev:1;)
+
+alert tcp any any -> any 80 (msg:"qt.io access"; content:"GET /"; content:"Host: "; content:"qt.io"; fast_pattern; sid:10004; rev:1;)
+alert tcp any any -> any 443 (msg:"qt.io access"; tls_sni; content:"qt.io"; fast_pattern; sid:10005; rev:1;)
+
+# 북마크
+alert tcp any any -> any 443 (msg:"naver.com access"; tls_sni; content:"naver.com"; fast_pattern; sid:10006; rev:1;)
+alert tcp any any -> any 443 (msg:"portal.korea.ac.kr access"; tls_sni; content:"portal.korea.ac.kr"; fast_pattern; sid:10007; rev:1;)
+alert tcp any any -> any 443 (msg:"kulms.korea.ac.kr access"; tls_sni; content:"kulms.korea.ac.kr"; fast_pattern; sid:10008; rev:1;)
+alert tcp any any -> any 443 (msg:"facebook.com access"; tls_sni; content:"facebook.com"; fast_pattern; sid:10009; rev:1;)
+alert tcp any any -> any 443 (msg:"instagram.com access"; tls_sni; content:"instagram.com"; fast_pattern; sid:10010; rev:1;)
+alert tcp any any -> any 443 (msg:"youtube.com access"; tls_sni; content:"youtube.com"; fast_pattern; sid:10011; rev:1;)
+alert tcp any any -> any 443 (msg:"memo.naver.com access"; tls_sni; content:"memo.naver.com"; fast_pattern; sid:10012; rev:1;)
+alert tcp any any -> any 443 (msg:"kart.nexon.com access"; tls_sni; content:"kart.nexon.com"; fast_pattern; sid:10013; rev:1;)
+alert tcp any any -> any 443 (msg:"fifaonline4.nexon.com access"; tls_sni; content:"fifaonline4.nexon.com"; fast_pattern; sid:10014; rev:1;)
+alert tcp any any -> any 443 (msg:"www.acmicpc.net access"; tls_sni; content:"www.acmicpc.net"; fast_pattern; sid:10015; rev:1;)
+alert tcp any any -> any 443 (msg:"dreamhack.io access"; tls_sni; content:"dreamhack.io"; fast_pattern; sid:10016; rev:1;)
+alert tcp any any -> any 443 (msg:"github.com access"; tls_sni; content:"github.com"; fast_pattern; sid:10017; rev:1;)
+
+# 네이버
+alert tcp any any -> any 443 (msg:"sports.news.naver.com access"; tls_sni; content:"sports.news.naver.com"; fast_pattern; sid:10018; rev:1;)
+alert tcp any any -> any 443 (msg:"finance.naver.com access"; tls_sni; content:"finance.naver.com"; fast_pattern; sid:10019; rev:1;)
+alert tcp any any -> any 443 (msg:"map.naver.com access"; tls_sni; content:"map.naver.com"; fast_pattern; sid:10020; rev:1;)
+alert tcp any any -> any 443 (msg:"comic.naver.com access"; tls_sni; content:"comic.naver.com"; fast_pattern; sid:10021; rev:1;)
+alert tcp any any -> any 443 (msg:"papago.naver.com access"; tls_sni; content:"papago.naver.com"; fast_pattern; sid:10022; rev:1;)
